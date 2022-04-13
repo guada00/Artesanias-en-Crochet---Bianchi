@@ -216,14 +216,6 @@ footer .facebook:hover{
     
         }
     }  
-
-.fotosproductos { 
-    height: auto;
-    width: 70%;
-    background-color:  white;
-    padding:10px 10px 35px 10px;
-
-}
     
 #uno{
     display: grid;
@@ -256,48 +248,14 @@ footer .facebook:hover{
     justify-items: center;
     display: grid;
 }
-#texto-encima1{
+#texto-encima{
     position:relative;
     font-style: normal;
     font-family: Hurricane;
     font-size: x-large;
     bottom:105%;  
 }
-#texto-encima2{
-    position:relative;
-    font-style: normal;
-    font-family: Hurricane;
-    font-size: x-large;
-    bottom:105%;  
-}
-#texto-encima3{
-    position:relative;
-    font-style: normal;
-    font-family: Hurricane;
-    font-size: x-large;
-    bottom:105%;  
-}
-#texto-encima4{
-    position:relative;
-    font-style: normal;
-    font-family: Hurricane;
-    font-size: x-large;
-    bottom:105%;  
-}
-#texto-encima5{
-    position:relative;
-    font-style: normal;
-    font-family: Hurricane;
-    font-size: x-large;
-    bottom:105%;  
-}
-#texto-encima6{
-    position:relative;
-    font-style: normal;
-    font-family: Hurricane;
-    font-size: x-large;
-    bottom:105%;  
-}
+  
 /*CSS Quienes Somos*/
 #quienesSomos{
     display:grid;
