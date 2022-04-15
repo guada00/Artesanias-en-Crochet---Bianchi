@@ -83,6 +83,7 @@ nav{
 nav a:hover{
     animation:nav 3s;
     font-size: 1.05rem;
+    color:whitesmoke;
 }
 
 nav ul li{
@@ -94,6 +95,7 @@ nav ul li{
 
 a.current:link, a.current:visited {
     text-decoration: underline;
+    color:whitesmoke;
 }
 
 ul li a{
@@ -108,7 +110,7 @@ a{
     font-family: 'Quicksand', sans-serif;
     text-align: center;
     min-height: 31rem;
-    margin-top: 20px;
+    
     grid-area:section;
     display:flex;
     flex-direction: column;
@@ -116,66 +118,79 @@ a{
     align-items: center;
     
 }
+.container{
+    max-width:100%;
+    margin:0%;
+    padding:0%;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));}
 
-footer{
-    background-color:#bcb8b1;
-    text-align: center;
-    grid-area: footer;
-    height: 59px;
-    display:column;
-    justify-content: center;    
-    bottom:0%;
+    .col-2 {
+    flex: 0 0 auto;
+    width: 50%;
+}
+.py-4 {
+    padding-top: 1.5rem!important;
+    padding-bottom: 0!important;}
+.py-5 {
+         padding-top: 1.5rem!important; 
+        padding-bottom: 1.5rem!important;
+    }
+.my-4 {
+        margin-top: 1rem!important;
+        margin-bottom: 0!important;
+    text-align: center ;}
+.p-1{
+        padding-top:0!important;
+    }
+.btni{
+    font-size: 2rem!important;
+    padding: 0px 5px!important;
+    color: whitesmoke;
 }
 
-footer p{
-    color:white;
-    position:relative;
-    overflow: hidden;
-    margin-bottom: 1px;
-    font-family:'Quicksand', sans-serif;
-    font-size: small;
-}
-
-footer a{
-    color:rgb(255, 255, 255);
-    font-size: x-large;
-    display: inline;
-    transition:background-color;
-    
-            
-}
-
-footer .instagram:hover{
+footer #instagram:hover{
     color: mediumvioletred;
     background-size: 1.7rem;
     display: inline-flex;
     font-size:1.7rem;
 }
 
-footer .facebook:hover{
+footer #facebook:hover{
     color: darkblue;
     font-size:1.7rem;
     display: inline-flex;
     
 }
-
+ol,ul,dl {
+    margin-bottom: 0!important;
+}
 /*CSS Productos*/
-
 #buscadorproductos{
     position: relative;
     text-align: right;
-    margin-right: 0;
+    margin-right: 10px;
     display: grid;
     grid-area: buscador;
+    padding-top:6px;
 }
 .buscarp{ text-align: right;
 
+}
+.card-body{
+    padding: 0.5rem 0.5rem!important;
 }
 .buscar{
     border-radius: 5px;
     border-width: 0.5px;
     font-family:'Quicksand', sans-serif;
-    height:25px;
     align-items: right;
 }
 
@@ -297,16 +312,21 @@ footer .facebook:hover{
 .gridContacto{
     display: grid;
     grid-template-columns: 500px 500px;
-    grid-template-rows: 100px 200px;
+    grid-template-rows: 180px 200px 200px;
     grid-template-areas: 
     "datos datos"
     "mapa ingresardatos"
+    "footer footer"
     ;
+}
+footer{
+    grid-area:footer;
+    /* display:grid; */
 }
 @media only screen and (max-width: 850px){
     .gridContacto {
         grid-template-columns: 1fr;
-        grid-template-rows: 0.1fr 1fr 1fr;
+        grid-template-rows: 0.01fr 1fr 1fr;
         grid-template-areas:
         "datos"
         "mapa"
@@ -369,7 +389,12 @@ footer .facebook:hover{
     margin-top:5%;
 }
 #preguntas{
-    margin: 2% 5% 10% 5%;
+    margin: 2% 5% 2.5% 5%;
     text-align: left;
     list-style: square;
+}
+@media only screen and (max-width: 850px){
+    h2{
+        padding-top: 1rem;
+    }
 }
