@@ -2,12 +2,11 @@
     margin:0;
     padding:0;
 }
-html,body{
+body{
     background: linear-gradient(68.4deg, rgb(248, 182, 204) 0.5%, rgb(192, 198, 230) 49%, rgb(225, 246, 240) 99.8%);
     background-size: cover;
     margin:0;
     padding:0;
-    height: 100%;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -80,7 +79,6 @@ nav{
     height: 50px;    
     align-items: center;
     padding-right: 10px;
-    height: 7%;
 }
 nav a:hover{
     animation:nav 3s;
@@ -118,7 +116,7 @@ a{
     flex-direction: column;
     justify-content: center; 
     align-items: center;
-    height: 83%;
+    
 }
 .container{
     max-width:100%;
@@ -323,7 +321,7 @@ ol,ul,dl {
 }
 footer{
     grid-area:footer;
-    height: 10%;
+    /* display:grid; */
 }
 @media only screen and (max-width: 850px){
     .gridContacto {
