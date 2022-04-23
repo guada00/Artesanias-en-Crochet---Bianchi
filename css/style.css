@@ -323,7 +323,7 @@ footer{
     grid-area:footer;
     /* display:grid; */
 }
-@media only screen and (max-width: 850px){
+@media only screen and (max-width: 850px) and (min-width:577px){
     .gridContacto {
         grid-template-columns: 1fr;
         grid-template-rows: 0.01fr 1fr 1fr;
