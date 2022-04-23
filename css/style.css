@@ -342,6 +342,37 @@ footer{
             "mapa"
             "ingresardatos";
             }
+            #datos{
+                flex-direction: column;
+                display:grid;
+                grid-area:datos;
+                margin-left: 10%;
+                list-style: square;
+                align-items: center;
+            }
+            #ingresardatos{
+                display:grid;    
+                text-align:left;
+                grid-area:ingresardatos;
+                display:block;
+                margin-left:20%;
+                 align-items: center;
+            }
+            #mapa{
+                display:grid;
+                grid-area:mapa;
+                margin: 5% 10% 10px 10%;
+                align-items: center;
+            }
+            .buscar{
+                margin:5px;
+                padding:5px;
+                width: auto;
+            }
+            #mensaje{
+                height: 142px;
+                width: auto;
+            }
         }   
 #sectioncontacto{
     font-family: 'Quicksand', sans-serif;
@@ -357,7 +388,7 @@ footer{
     flex-direction: column;
     display:grid;
     grid-area:datos;
-    margin-left: 40px;
+    margin-left: px;
     list-style: square;
 }
 
