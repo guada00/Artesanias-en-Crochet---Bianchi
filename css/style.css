@@ -333,7 +333,16 @@ footer{
         "ingresardatos";
         }
     }   
-
+    @media only screen and (max-width: 576px){
+        .gridContacto {
+            grid-template-columns: 550px;
+            grid-template-rows: 0.01fr 1fr 1fr;
+            grid-template-areas:
+            "datos"
+            "mapa"
+            "ingresardatos";
+            }
+        }   
 #sectioncontacto{
     font-family: 'Quicksand', sans-serif;
     text-align: left;
