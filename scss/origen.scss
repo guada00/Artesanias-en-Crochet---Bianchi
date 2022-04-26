@@ -66,13 +66,19 @@ body{
 	}
 	
 }
+$estilo: (
+    display: grid,
+    flexdirection: column
+);
+
 .gridPadre{
-    display:grid;
+    display: map-get($estilo, display); 
     grid-template-areas: 
     "nav nav nav"
     "section section section"
     "footer footer footer";
 }
+
 nav{
     background-color: #403d39;
     grid-area:nav; 
@@ -108,12 +114,14 @@ a.current:link, a.current:visited {
     text-decoration: underline;
     color:whitesmoke;
 }
+@mixin txtstyle ($valor1,$valor2){
+    text-align:$valor1;
+    font-family: $valor2;
+}
 
  section {
-    font-family: 'Quicksand', sans-serif;
-    text-align: center;
+     @include txtstyle(center,('Quicksand', sans-serif));
     min-height: 31rem;
-    
     grid-area:section;
     display:flex;
     flex-direction: column;
@@ -159,6 +167,7 @@ a.current:link, a.current:visited {
     color: whitesmoke;
 }
 
+
 footer #instagram:hover{
     color: $instagram;
     background-size: 1.7rem;
@@ -167,10 +176,8 @@ footer #instagram:hover{
 }
 
 footer #facebook:hover{
+    @extend #instagram;
     color: $facebook;
-    font-size:1.7rem;
-    display: inline-flex;
-    
 }
 ol,ul,dl {
     margin-bottom: 0!important;
@@ -198,16 +205,15 @@ ol,ul,dl {
 }
 
 .title {
-    font-family:'Quicksand', sans-serif;
+    @include txtstyle(left,('Quicksand', sans-serif));
     font-weight: 600;
-    text-align: left;
     margin-left: 40px;
     display: flex;
     align-items: left;
 }
 
 #gridProductos{
-    display:grid;
+    display:map-get($estilo,display);
     grid-template-columns: repeat(3,20rem);
     grid-template-rows: 25rem 25rem;
     gap: 10px;
@@ -245,6 +251,7 @@ ol,ul,dl {
     grid-area: dos;
     justify-items: center;
     display: grid;
+    @extend #uno 
 }
 #tres{
     grid-area: tres;
@@ -276,7 +283,7 @@ ol,ul,dl {
   
 /*CSS Quienes Somos*/
 #quienesSomos{
-    display:grid;
+    display:map-get($estilo,display); 
     grid-template-areas: "img1 img2";
     grid-template-columns: repeat(2,30rem);
     align-items: center;
@@ -284,12 +291,12 @@ ol,ul,dl {
    
 }
 #img1{
-    display:grid;
+    display:map-get($estilo,display); 
     grid-area: img1;
     justify-items:center;
 }
 #img2{
-    display:grid;
+    display:map-get($estilo,display); 
     grid-area: img2;
     justify-items:center;
 }
@@ -324,7 +331,7 @@ ol,ul,dl {
 }
 footer{
     grid-area:footer;
-    /* display:grid; */
+    
 }
 @media only screen and (max-width: 850px) and (min-width:577px){
     .gridContacto {
@@ -346,15 +353,15 @@ footer{
             "ingresardatos";
             }
             #datos{
-                flex-direction: column;
-                display:grid;
+                flex-direction: map-get($estilo,flexdirection);
+                display:map-get($estilo,display); 
                 grid-area:datos;
                 margin-left: 10%;
                 list-style: square;
                 align-items: center;
             }
             #ingresardatos{
-                display:grid;    
+                display: map-get($estilo,display);    
                 text-align:left;
                 grid-area:ingresardatos;
                 display:block;
@@ -362,7 +369,7 @@ footer{
                  align-items: center;
             }
             #mapa{
-                display:grid;
+                display: map-get($estilo,display); 
                 grid-area:mapa;
                 margin: 5% 10% 10px 10%;
                 align-items: center;
@@ -378,30 +385,30 @@ footer{
             }
         }   
 #sectioncontacto{
-    font-family: 'Quicksand', sans-serif;
-    text-align: left;
+    @include txtstyle(left,('Quicksand', sans-serif));
     min-height: 31rem;
     margin-top: 20px;
     display:flex;
-    flex-direction: column;
+    flex-direction: map-get($estilo,flexdirection);
     justify-content: flex-start; 
     align-items:center;
 }
 #datos{
-    flex-direction: column;
-    display:grid;
+    flex-direction: map-get($estilo, flexdirection);
+    display: map-get($estilo,display); 
     grid-area:datos;
     margin-left: px;
     list-style: square;
     li p{
         color:darkmagenta;
         text-align: left;
-}
+}}
 
 
-}
+
+
 #ingresardatos{
-    display:grid;    
+    display: map-get($estilo,display);    
     text-align:left;
     width: 500px;
     grid-area:ingresardatos;
@@ -414,7 +421,7 @@ footer{
 }
 
 #mapa{
-    display:grid;
+    display:map-get($estilo,display); 
     grid-area:mapa;
     margin: 5% 20px 10px 20px;
 }

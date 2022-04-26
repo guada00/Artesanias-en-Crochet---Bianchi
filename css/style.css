@@ -101,8 +101,8 @@ a.current:link, a.current:visited {
 }
 
 section {
-  font-family: "Quicksand", sans-serif;
   text-align: center;
+  font-family: "Quicksand", sans-serif;
   min-height: 31rem;
   grid-area: section;
   display: flex;
@@ -158,7 +158,7 @@ section {
   color: whitesmoke;
 }
 
-footer #instagram:hover {
+footer #instagram:hover, footer #facebook:hover {
   color: mediumvioletred;
   background-size: 1.7rem;
   display: inline-flex;
@@ -167,8 +167,6 @@ footer #instagram:hover {
 
 footer #facebook:hover {
   color: darkblue;
-  font-size: 1.7rem;
-  display: inline-flex;
 }
 
 ol, ul, dl {
@@ -201,9 +199,9 @@ ol, ul, dl {
 }
 
 .title {
+  text-align: left;
   font-family: "Quicksand", sans-serif;
   font-weight: 600;
-  text-align: left;
   margin-left: 40px;
   display: flex;
   align-items: left;
@@ -227,7 +225,7 @@ ol, ul, dl {
     grid-template-areas: "uno uno" "dos dos" "tres tres" "cuatro cuatro" "cinco cinco" "seis seis";
   }
 }
-#uno {
+#uno, #dos {
   display: grid;
   grid-area: uno;
   justify-items: center;
@@ -316,7 +314,6 @@ ol, ul, dl {
 
 footer {
   grid-area: footer;
-  /* display:grid; */
 }
 
 @media only screen and (max-width: 850px) and (min-width: 577px) {
@@ -370,8 +367,8 @@ footer {
   }
 }
 #sectioncontacto {
-  font-family: "Quicksand", sans-serif;
   text-align: left;
+  font-family: "Quicksand", sans-serif;
   min-height: 31rem;
   margin-top: 20px;
   display: flex;
