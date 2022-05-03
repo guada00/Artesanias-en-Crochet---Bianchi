@@ -316,18 +316,12 @@ footer {
   grid-area: footer;
 }
 
-@media only screen and (max-width: 850px) and (min-width: 577px) {
-  .gridContacto {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.01fr 1fr 1fr;
-    grid-template-areas: "datos" "mapa" "ingresardatos";
-  }
-}
 @media only screen and (max-width: 576px) {
   .gridContacto {
-    grid-template-columns: 550px;
+    grid-template-columns: 95vw;
     grid-template-rows: 0.01fr 1fr 1fr;
     grid-template-areas: "datos" "mapa" "ingresardatos";
+    justify-items: center;
   }
 
   #datos {
@@ -337,15 +331,18 @@ footer {
     margin-left: 10%;
     list-style: square;
     align-items: center;
+    justify-items: start;
+    
   }
 
   #ingresardatos {
     display: grid;
     text-align: left;
     grid-area: ingresardatos;
-    display: block;
-    margin-left: 20%;
+    margin-left: 0%;
     align-items: center;
+    justify-items: center;
+    width: 95vw;
   }
 
   #mapa {
@@ -353,17 +350,24 @@ footer {
     grid-area: mapa;
     margin: 5% 10% 10px 10%;
     align-items: center;
+    width: 95vw;
+    justify-items: center;
   }
 
-  .buscar {
-    margin: 5px;
+  #form .buscar {
+    margin: 5px 5px 5px 0;
     padding: 5px;
-    width: auto;
+    width: 95vw;
   }
-
+  #form{
+    width: 95vw;
+  }
+#mapa iframe{
+  width: 100%;
+}
   #mensaje {
     height: 142px;
-    width: auto;
+    width: 95vw;
   }
 }
 #sectioncontacto {
@@ -392,26 +396,28 @@ footer {
 #ingresardatos {
   display: grid;
   text-align: left;
-  width: 500px;
+  
   grid-area: ingresardatos;
-  display: block;
-  margin-left: 20px;
+  margin-left: 0px;
+  justify-items: center;
 }
 
 #form {
   margin-top: 4%;
+  width: 100%;
 }
 
 #mapa {
   display: grid;
   grid-area: mapa;
   margin: 5% 20px 10px 20px;
+  justify-items: center;
 }
 
-.buscar {
-  margin: 5px;
+#form .buscar {
+  margin: 5px 5px 5px 0;
   padding: 5px;
-  width: 450px;
+  width: 100%;
 }
 
 #mensaje {
