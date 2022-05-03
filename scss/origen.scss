@@ -343,9 +343,9 @@ footer{
         "ingresardatos";
         }
     }   
-    @media only screen and (max-width: 576px){
+@media only screen and (max-width: 576px){
         .gridContacto {
-            grid-template-columns: 550px;
+            grid-template-columns: 95vw;
             grid-template-rows: 0.01fr 1fr 1fr;
             grid-template-areas:
             "datos"
@@ -365,7 +365,7 @@ footer{
                 text-align:left;
                 grid-area:ingresardatos;
                 display:block;
-                margin-left:20%;
+                margin-left:0;
                  align-items: center;
             }
             #mapa{
@@ -373,15 +373,20 @@ footer{
                 grid-area:mapa;
                 margin: 5% 10% 10px 10%;
                 align-items: center;
+                
             }
             .buscar{
                 margin:5px;
                 padding:5px;
-                width: auto;
+                width: 95vw;
             }
             #mensaje{
                 height: 142px;
-                width: auto;
+                width: 95vw;
+            }
+            #mapa iframe{
+                width: 95vw;
+                height: auto;
             }
         }   
 #sectioncontacto{
@@ -397,7 +402,7 @@ footer{
     flex-direction: map-get($estilo, flexdirection);
     display: map-get($estilo,display); 
     grid-area:datos;
-    margin-left: px;
+    
     list-style: square;
     li p{
         color:darkmagenta;
@@ -413,7 +418,7 @@ footer{
     width: 500px;
     grid-area:ingresardatos;
     display:block;
-    margin-left:20px;
+    margin-left:0;
      
 }
 #form{
