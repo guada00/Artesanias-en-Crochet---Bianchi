@@ -4,7 +4,6 @@
     padding:0;
 }
 
-
 body{
     background: linear-gradient(68.4deg, rgb(248, 182, 204) 0.5%, rgb(192, 198, 230) 49%, rgb(225, 246, 240) 99.8%);
     background-size: cover;
@@ -109,6 +108,9 @@ nav{
     }
     
 }
+@media only screen and (max-width: 568px) {
+    nav{height: fit-content;}
+  }
 
 a.current:link, a.current:visited {
     text-decoration: underline;
@@ -166,6 +168,7 @@ a.current:link, a.current:visited {
     padding: 0px 5px!important;
     color: whitesmoke;
 }
+
 
 
 footer #instagram:hover{
@@ -250,8 +253,7 @@ ol,ul,dl {
 #dos{
     grid-area: dos;
     justify-items: center;
-    display: grid;
-    @extend #uno 
+    display: grid; 
 }
 #tres{
     grid-area: tres;
@@ -325,7 +327,7 @@ ol,ul,dl {
     grid-template-rows: 180px 200px 200px;
     grid-template-areas: 
     "datos datos"
-    "img3 ingresardatos"
+    "mapa ingresardatos"
     "footer footer"
     ;
 }
@@ -340,7 +342,7 @@ footer{
             grid-template-rows: 0.01fr 1fr 1fr;
             grid-template-areas:
             "datos"
-            "img3"
+            "mapa"
             "ingresardatos";
             justify-items: center;
             
@@ -349,41 +351,46 @@ footer{
                 flex-direction: map-get($estilo,flexdirection);
                 display:map-get($estilo,display); 
                 grid-area:datos;
-                margin-left: 0;
+                margin-left: 10%;
                 list-style: square;
                 align-items: center;
                 justify-items: start;
-                align-items: center;
             }
             #ingresardatos{
                 display: map-get($estilo,display);    
                 text-align:left;
                 grid-area:ingresardatos;
-                display:block;
-                margin-left:0;
+                margin-left:0%;
                 align-items: center;
-                width: 100%;
-            }
-            #img3{
-                display: map-get($estilo,display); 
-                grid-area:img3;
                 justify-items: center;
-                
-            }
-            .buscar{
-                margin:5px;
-                padding:5px;
                 width: 95vw;
             }
+            #mapa{
+                display: map-get($estilo,display); 
+                grid-area: mapa;
+                margin: 5% 10% 10px 10%;
+                align-items: center;
+                width: 95vw;
+                justify-items: center;
+                iframe{
+                    width: 100%;
+    
+                }
+            }
+            #form{
+                width: 95vw;
+                .buscar{
+                    margin: 5px 5px 5px 0;
+                    padding: 5px;
+                    width: 95vw;
+              }
+            }
+            
             #mensaje{
                 height: 142px;
-                width: 95vw;
-            }
-            #img3 iframe{
-                width: 95vw;
-                height: auto;
-
-            }
+                width: 95vw;}
+                
+           
         }   
 #sectioncontacto{
     @include txtstyle(left,('Quicksand', sans-serif));
@@ -393,13 +400,12 @@ footer{
     flex-direction: map-get($estilo,flexdirection);
     justify-content: flex-start; 
     align-items:center;
-    width: 100vw;
 }
 #datos{
     flex-direction: map-get($estilo, flexdirection);
     display: map-get($estilo,display); 
     grid-area:datos;
-    
+    margin-left: px;
     list-style: square;
     li p{
         color:darkmagenta;
@@ -412,30 +418,33 @@ footer{
 #ingresardatos{
     display: map-get($estilo,display);    
     text-align:left;
-    width: 100%;
+    
     grid-area:ingresardatos;
-    display:block;
-    margin-left:0;
-     
-}
+    margin-left: 0px;
+    justify-items: center;
+  }
 #form{
     margin-top: 4%;
+    width:100%;
+    .buscar {
+        margin: 5px 5px 5px 0;
+        padding: 5px;
+        width: 100%;
+      }
 }
 
-#img3{
+#mapa{
     display:map-get($estilo,display); 
-    grid-area:img3;
+    grid-area:mapa;
+    margin: 5% 20px 10px 20px;
     justify-items: center;
 }
-.buscar{
-    margin:5px;
-    padding:5px;
-    width: 450px;
-}
+
 #mensaje{
     height: 142px;
     width: 450px;
 }
+
 
 /*CSS Preguntas frecuentes*/
 #marginPreguntas{
@@ -450,4 +459,5 @@ footer{
     h2{
         padding-top: 1rem;
     }
+
 }

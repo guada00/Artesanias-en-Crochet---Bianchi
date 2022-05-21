@@ -66,7 +66,7 @@ body {
   display: grid;
   grid-template-areas: "nav nav nav" "section section section" "footer footer footer";
 }
-/*nav responsive*/
+
 nav {
   background-color: #403d39;
   grid-area: nav;
@@ -89,15 +89,17 @@ nav a {
   outline: none;
   text-decoration: none;
 }
-@media only screen and (max-width: 568px) {
-  nav{height: fit-content;}
-}
 nav a:hover {
   animation: nav 3s;
   font-size: 1.05rem;
   color: whitesmoke;
 }
 
+@media only screen and (max-width: 568px) {
+  nav {
+    height: fit-content;
+  }
+}
 a.current:link, a.current:visited {
   text-decoration: underline;
   color: whitesmoke;
@@ -228,7 +230,7 @@ ol, ul, dl {
     grid-template-areas: "uno uno" "dos dos" "tres tres" "cuatro cuatro" "cinco cinco" "seis seis";
   }
 }
-#uno, #dos {
+#uno {
   display: grid;
   grid-area: uno;
   justify-items: center;
@@ -335,7 +337,6 @@ footer {
     list-style: square;
     align-items: center;
     justify-items: start;
-    
   }
 
   #ingresardatos {
@@ -356,18 +357,19 @@ footer {
     width: 95vw;
     justify-items: center;
   }
+  #mapa iframe {
+    width: 100%;
+  }
 
+  #form {
+    width: 95vw;
+  }
   #form .buscar {
     margin: 5px 5px 5px 0;
     padding: 5px;
     width: 95vw;
   }
-  #form{
-    width: 95vw;
-  }
-#mapa iframe{
-  width: 100%;
-}
+
   #mensaje {
     height: 142px;
     width: 95vw;
@@ -399,7 +401,6 @@ footer {
 #ingresardatos {
   display: grid;
   text-align: left;
-  
   grid-area: ingresardatos;
   margin-left: 0px;
   justify-items: center;
@@ -409,18 +410,17 @@ footer {
   margin-top: 4%;
   width: 100%;
 }
+#form .buscar {
+  margin: 5px 5px 5px 0;
+  padding: 5px;
+  width: 100%;
+}
 
 #mapa {
   display: grid;
   grid-area: mapa;
   margin: 5% 20px 10px 20px;
   justify-items: center;
-}
-
-#form .buscar {
-  margin: 5px 5px 5px 0;
-  padding: 5px;
-  width: 100%;
 }
 
 #mensaje {

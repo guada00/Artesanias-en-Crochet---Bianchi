@@ -1,7 +1,6 @@
 {
   "name": "artesanias-en-crochet--bianchi",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +14,6 @@
   "bugs": {
     "url": "https://github.com/guada00/Artesanias-en-Crochet---Bianchi/issues"
   },
-  "homepage": "https://github.com/guada00/Artesanias-en-Crochet---Bianchi#readme"
+  "homepage": "https://github.com/guada00/Artesanias-en-Crochet---Bianchi#readme",
+  "description": ""
 }
